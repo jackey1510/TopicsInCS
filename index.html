@@ -47,67 +47,133 @@
 	<svg width="283px" height="50px"></svg>
 	<h1>Entity-Relationship Diagram<h1>
 	<table style="width:100%">
-	<tr>
-	<th>Entity Sets</th>
-	<th>Relationship Sets</th>
-	<th>Attribute and Value Pairs</th>
-	</tr>
-	<tr>
-		<th><img src="diagram/entity.png" alt="Entity Sets" style="width:283px;height:103px;"></th>
-		<th><img src="diagram/relationship.png" alt="Relationship Sets" style="width:513px;height:118px;"></th>
-		<th><img src="diagram/attribute.png" alt="Attribute and Value Pairs" style="width:553px;height:313px;"></th>
-	</tr>
-	<tr>
-		<td><ul><li>An entity is a thing which can be distincly identified</li></td>
-		<td><ul><li>The entities may be related.</li>
-		<li>There are many different types of relationship exist between entities.</li></ul></td>
-		<td><ul><li>Attribute and value pairs are the properties of entities and relationships.</li>
-		<li>A value set is a set of values of the same type.</li>
-		<li>An attribute is a mapping from an entity or a relationship set to value sets.</li></ul></td>
-	</tr>
-	<tr>
-	<th></th>
-	<th><img src="diagram/final_diagram.png" alt="final diagram" style="width:463px;height:499px;"></th>
-	<th></th>
-	</tr>
-	<tr>
-	<td></td>
-	<td style="text-align:center;">There are many different types of mapping, including 1:1, 1:n, m:1 and m:n.</td>
-	<td></td>
-	</tr>
+		<tr>
+		<th>Entity Sets</th>
+		<th>Relationship Sets</th>
+		<th>Attribute and Value Pairs</th>
+		</tr>
+		<tr>
+			<th><img src="diagram/entity.png" alt="Entity Sets" style="width:283px;height:103px;"></th>
+			<th><img src="diagram/relationship.png" alt="Relationship Sets" style="width:513px;height:118px;"></th>
+			<th><img src="diagram/attribute.png" alt="Attribute and Value Pairs" style="width:553px;height:313px;"></th>
+		</tr>
+		<tr>
+			<td><ul><li>An entity is a thing which can be distincly identified</li></td>
+			<td><ul><li>The entities may be related.</li>
+			<li>There are many different types of relationship exist between entities.</li></ul></td>
+			<td><ul><li>Attribute and value pairs are the properties of entities and relationships.</li>
+			<li>A value set is a set of values of the same type.</li>
+			<li>An attribute is a mapping from an entity or a relationship set to value sets.</li></ul></td>
+		</tr>
+		<tr>
+			<th></th>
+			<th><img src="diagram/final_diagram.png" alt="final diagram" style="width:463px;height:499px;"></th>
+			<th></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td style="text-align:center;">There are many different types of mapping, including 1:1, 1:n, m:1 and m:n.</td>
+			<td></td>
+		</tr>
 	</table>
 	<h1>Opeartion</h1>
 	<table style="width:100%">
-	<tr>
-	<th></th>
-	<th>Upper Conceptual Domain</th>
-	<th>Lower Conceptual Domain</th>
-	</tr>
-	<tr>
-	<th rowspan="4">Merge and Split</th>
-	<th><img src="diagram/Split&Merge.png" alt="Split and Merge" style="width:537px;height:331px;"></th>
-	<th><img src="diagram/Split&Merge_Lower.png" alt="Split and Merge Lower" style="width:653px;height:303px;"></th>
-	</tr>
-	<tr>
-	<td style="text-align:center">Student<-->Male_Student and Female_Student</td>
-	<td style="text-align:center">Name<-->First Name and Last Name</td>
-	<tr>
-	<th><img src="diagram/Split&Merge2.png" alt="Split and Merge" style="width:504px;height:273px;"></th>
-	<th><img src="diagram/Split&Merge_Lower2.png" alt="Split and Merge Lower 2" style="width:703px;height:313px;"></th>
-	</tr>
-	<tr>
-	<td style="text-align:center">Faculty_Student<-->Faculty_UG_Student and Faculty_PG_Student</td>
-	<td style="text-align:center">Address<-->Home_Address and Term_Address</td>
-	<tr>
-	<th rowspan="2">Add and Delete</th>
-	<th><img src="diagram/Add&Delete_Upper.png" alt="Add and Delete Upper" style="width:613px;height:678px;"></th>
-	<th><img src="diagram/Add&Delete_Lower.png" alt="Add and Delete Lower" style="width:743px;height:713px;"></th>
-	</tr>
-	<tr>
-	<td style="text-align:center">Entity set Society and relationship set Society are added/deleted</td>
-	<td style="text-align:center">Value set Sex and Attribute sets Sexuality and Other_Names are added/deleted</td>
-	</tr>
+		<tr>
+			<th></th>
+			<th>Upper Conceptual Domain</th>
+			<th>Lower Conceptual Domain</th>
+			</tr>
+		<tr>
+			<th rowspan="4">Split and Merge</th>
+			<th><img id = "upper1" src="diagram/split.png" alt="Split and Merge" style="width:123px;height:331px;"></th>
+			<th><img id = "lower1" src="diagram/split_lower.png" alt="Split and Merge Lower" style="width:223px;height:303px;"></th>
+		</tr>
+		<tr>
+			<th style="font-size: 24px"><input type="button" value="Split" onclick="s1();">&nbsp;&nbsp;&nbsp;<input type="button"	value="Merge" onclick="m1();"></th>
+			<th style="font-size: 24px"><input type="button" value="Split" onclick="s2();">&nbsp;&nbsp;&nbsp;<input type="button"	value="Merge" onclick="m2();"></th>
+		<tr>
+			<th><img id="upper2" src="diagram/split2.png" alt="Split and Merge" style="width:123px;height:273px;"></th>
+			<th><img id="lower2" src="diagram/split_lower2.png" alt="Split and Merge Lower 2" style="width:223px;height:313px;"></th>
+		</tr>
+		<tr>
+			<th style="font-size: 24px"><input type="button" value="Split" onclick="s3();">&nbsp;&nbsp;&nbsp;<input type="button"	value="Merge" onclick="m3();"></th>
+			<th style="font-size: 24px"><input type="button" value="Split" onclick="s4();">&nbsp;&nbsp;&nbsp;<input type="button"	value="Merge" onclick="m4();"></th>
+			<tr>
+		<th rowspan="2">Add and Delete</th>
+			<th><img src="diagram/Add&Delete_Upper.png" alt="Add and Delete Upper" style="width:613px;height:678px;"></th>
+			<th><img src="diagram/Add&Delete_Lower.png" alt="Add and Delete Lower" style="width:743px;height:713px;"></th>
+		</tr>
+		<tr>
+			<td style="text-align:center">Entity set Society and relationship set Society are added/deleted</td>
+			<td style="text-align:center">Value set Sex and Attribute sets Sexuality and Other_Names are added/deleted</td>
+		</tr>
 	</table>
+	<script>
+		function s1()
+		{
+		id="upper1";
+		var img = document.getElementById(id);
+		img.style="width:288px;height:331px;";
+		img.src="diagram/merge.png";
+		return false;
+		}
+		function m1()
+		{
+		id="upper1";
+		var img = document.getElementById(id);
+		img.style="width:123px;height:331px";
+		img.src="diagram/split.png";
+		return false;
+		}
+		function s2()
+		{
+		id="lower1";
+		var img = document.getElementById(id);
+		img.style="width:283px;height:303px;";
+		img.src="diagram/merge_lower.png";
+		return false;
+		}
+		function m2()
+		{
+		id="lower1";
+		var img = document.getElementById(id);
+		img.style="width:223px;height:303px;";
+		img.src="diagram/split_lower.png";
+		return false;
+		}
+		function s3()
+		{
+		id="upper2";
+		var img = document.getElementById(id);
+		img.style="width:233px;height:273px;";
+		img.src="diagram/merge2.png";
+		return false;
+		}
+		function m3()
+		{
+		id="upper2";
+		var img = document.getElementById(id);
+		img.style="width:123px;height:273px;";
+		img.src="diagram/split2.png";
+		return false;
+		}
+		function s4()
+		{
+		id="lower2";
+		var img = document.getElementById(id);
+		img.style="width:342px;height:303px;";
+		img.src="diagram/merge_lower2.png";
+		return false;
+		}
+		function m4()
+		{
+		id="lower2";
+		var img = document.getElementById(id);
+		img.style="width:223px;height:313px;";
+		img.src="diagram/split_lower2.png";
+		return false;
+		}
+	</script>
     <!-- Add your page here -->
 </body>
 </html>
