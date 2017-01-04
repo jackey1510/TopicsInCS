@@ -2,7 +2,6 @@ button {
     margin: 2px;
     margin-left: 80px;
 }
-
 text {
     font: 12px sans-serif;
 }
@@ -33,4 +32,5 @@ font-size: 16px;
 }
 input{
 	font-size: 15px;
+	padding: 30px;
 }
