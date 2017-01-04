@@ -2,7 +2,18 @@ button {
     margin: 2px;
     margin-left: 80px;
 }
-
 text {
     font: 12px sans-serif;
+}
+table, th, td {
+	padding: 30px;
+}
+th {
+	text-align:center;
+	font-size: 36px;
+}
+td {
+	text-align:left;
+	font-size: 15px;
+	color:#666666;
 }
