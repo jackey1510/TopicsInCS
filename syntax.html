@@ -6,20 +6,6 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="js/w3data.js"></script> -->
-	<style>
-	table, th, td {
-		 padding: 30px;
-	}
-	th{
-    text-align:center;
-	font-size: 36px;
-	}
-	td{
-	text-align:left;
-	font-size: 15px;
-	color:#666666;
-	}
-</style>
 </head>
 <body>
     <!-- <div w3-include-html="nav.html"></div>  -->
@@ -47,7 +33,7 @@
         </div>
     </nav>
     <!-- Add your page here -->
-	<svg width="283px" height="50px"></svg>
+	<br><br><br>
 	<h1>Entity-Relationship Diagram<h1>
 	<table style="width:100%">
 		<tr>
@@ -57,20 +43,27 @@
 		</tr>
 		<tr>
 			<th><img src="diagram/entity.png" alt="Entity Sets" style="width:283px;height:103px;"></th>
-			<th><img src="diagram/relationship.png" alt="Relationship Sets" style="width:513px;height:118px;"></th>
-			<th><img src="diagram/attribute.png" alt="Attribute and Value Pairs" style="width:553px;height:313px;"></th>
+			<th><img src="diagram/relationship.png" alt="Relationship Sets" style="width:384px;height:89px;"></th>
+			<th><img src="diagram/attribute.png" alt="Attribute and Value Pairs" style="width:363px;height:206px;"></th>
 		</tr>
 		<tr>
-			<td><ul><li>An entity is a thing which can be distincly identified</li></td>
+			<td><ul><li>An entity is a thing which can be distincly identified.</li>
+			<li>For example, student and course are entity sets.</li>
+			<li>Entity sets are in the upper conceptural domain.</li></ul>
+			</td>
 			<td><ul><li>The entities may be related.</li>
-			<li>There are many different types of relationship exist between entities.</li></ul></td>
+			<li>There are many different types of relationship exist between entities.</li>
+			<li>E.g. Course_Student is the relationship between course and student.</li>
+			<li>Relationship sets are in the upper conceptural domain as well.</li></ul></td>
 			<td><ul><li>Attribute and value pairs are the properties of entities and relationships.</li>
 			<li>A value set is a set of values of the same type.</li>
-			<li>An attribute is a mapping from an entity or a relationship set to value sets.</li></ul></td>
+			<li>An attribute is a mapping from an entity or a relationship set to value sets.</li>
+			<li>E.g. ID_Number and Name are values sets of the attribute sets Student_ID and Legal_Name respectively.</li>
+			<li>They are in the lower conceptural domain.</li></td>
 		</tr>
 		<tr>
 			<th></th>
-			<th><img src="diagram/final_diagram.png" alt="final diagram" style="width:463px;height:499px;"></th>
+			<th><img src="diagram/final_diagram.png" alt="final diagram" style="width:370px;height:399px;"></th>
 			<th></th>
 		</tr>
 		<tr>
@@ -79,6 +72,7 @@
 			<td></td>
 		</tr>
 	</table>
+	
 	<script>
 		function s1()
 		{

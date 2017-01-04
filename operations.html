@@ -6,20 +6,6 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="js/w3data.js"></script> -->
-	<style>
-	table, th, td {
-		 padding: 30px;
-	}
-	th{
-    text-align:center;
-	font-size: 36px;
-	}
-	td{
-	text-align:left;
-	font-size: 15px;
-	color:#666666;
-	}
-</style>
 </head>
 <body>
     <!-- <div w3-include-html="nav.html"></div>  -->
@@ -32,7 +18,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Topics in Computer Science</a>
+                <a class="navbar-brand" href="index.html">Topics in Computer Science</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -47,7 +33,8 @@
         </div>
     </nav>
     <!-- Add your page here -->
-	<h1>Opeartion</h1>
+	<br><br><br>
+	<h1>Operations in Upper Conceptual Domain and Lower Conceptual Domain</h1>
 	<table style="width:100%">
 		<tr>
 			<th></th>
@@ -60,90 +47,181 @@
 			<th><img id = "lower1" src="diagram/split_lower.png" alt="Split and Merge Lower" style="width:223px;height:303px;"></th>
 		</tr>
 		<tr>
-			<th style="font-size: 24px"><input type="button" value="Split" onclick="s1();">&nbsp;&nbsp;&nbsp;<input type="button"	value="Merge" onclick="m1();"></th>
-			<th style="font-size: 24px"><input type="button" value="Split" onclick="s2();">&nbsp;&nbsp;&nbsp;<input type="button"	value="Merge" onclick="m2();"></th>
+			<td class="mid"><input type="button" value="Split an entity set" onclick="s1();">&nbsp;&nbsp;&nbsp;<input type="button" value="Merge entity sets" onclick="m1();"><br>
+			Student<-->Male/Female_Student<br>
+			Course_Student<-->Course_Male/Female_Student</td>
+			<td class="mid"><input type="button" value="Split a value set" onclick="s2();">&nbsp;&nbsp;&nbsp;<input type="button" value="Merge value sets" onclick="m2();"><br>
+			Name<-->First/Last_Name</td>
+			
 		<tr>
 			<th><img id="upper2" src="diagram/split2.png" alt="Split and Merge" style="width:123px;height:273px;"></th>
-			<th><img id="lower2" src="diagram/split_lower2.png" alt="Split and Merge Lower 2" style="width:223px;height:313px;"></th>
+			<th><img id="lower2" src="diagram/split_lower2.png" alt="Split and Merge Lower 2" style="width:223px;height:303px;"></th>
 		</tr>
 		<tr>
-			<th style="font-size: 24px"><input type="button" value="Split" onclick="s3();">&nbsp;&nbsp;&nbsp;<input type="button"	value="Merge" onclick="m3();"></th>
-			<th style="font-size: 24px"><input type="button" value="Split" onclick="s4();">&nbsp;&nbsp;&nbsp;<input type="button"	value="Merge" onclick="m4();"></th>
-			<tr>
-		<th rowspan="2">Add and Delete</th>
-			<th><img src="diagram/Add&Delete_Upper.png" alt="Add and Delete Upper" style="width:613px;height:678px;"></th>
-			<th><img src="diagram/Add&Delete_Lower.png" alt="Add and Delete Lower" style="width:743px;height:713px;"></th>
+			<td class="mid"><input type="button" value="Split a relationship set" onclick="s3();">&nbsp;&nbsp;&nbsp;<input type="button" value="Merge relationship sets" onclick="m3();"><br>
+			Faculty_Student<-->Faculty_UG/PG_Student</td>
+			<td class="mid"><input type="button" value="Split an attribute set" onclick="s4();">&nbsp;&nbsp;&nbsp;<input type="button"	value="Merge attribute sets" onclick="m4();"><br>
+			Address<-->Home/Term_Address</td>
 		</tr>
 		<tr>
-			<td style="text-align:center">Entity set Society and relationship set Society are added/deleted</td>
-			<td style="text-align:center">Value set Sex and Attribute sets Sexuality and Other_Names are added/deleted</td>
+		<th rowspan="4">Add and Delete</th>
+			<th><img id="upper3" src="diagram/Add_upper.png" alt="Add and Delete Upper" style="width:123px;height:273px;"></th>
+			<th><img id="lower3" src="diagram/Add_lower.png" alt="Add and Delete Lower" style="width:223px;height:303px;"></th>
+		</tr>
+		<tr>
+			<td class="mid"><input type="button" value="Add an entity set" onclick="a1();">&nbsp;&nbsp;&nbsp;<input type="button" value="Delete an entity set" onclick="d1();"><br>
+			Added/Deleted Society and Society_Member</td>
+			<td class="mid"><input type="button" value="Add a value set" onclick="a2();">&nbsp;&nbsp;&nbsp;<input type="button" value="Delete a value set" onclick="d2();"><br>
+			Added/Deleted Sex and Sexuality</td>
+		</tr>
+		<tr>
+			<th><img id="upper4" src="diagram/Delete_upper.png" alt="Add and Delete Upper" style="width:438px;height:278px;"></th>
+			<th><img id="lower4" src="diagram/Delete_lower.png" alt="Add and Delete Lower" style="width:488px;height:293px;"></th>
+		</tr>
+		<tr>
+			<td class="mid"><input type="button" value="Add a relationship set" onclick="a3();">&nbsp;&nbsp;&nbsp;<input type="button" value="Delete a relationship set" onclick="d3();"><br>
+			Added/Deleted Society_Committee</td>
+			<td class="mid"><input type="button" value="Add a value set" onclick="a4();">&nbsp;&nbsp;&nbsp;<input type="button" value="Delete a value set" onclick="d4();"><br>
+			Added/Deleted Sex and Sexuality</td>
 		</tr>
 	</table>
 	<script>
 		function s1()
 		{
-		id="upper1";
-		var img = document.getElementById(id);
-		img.style="width:288px;height:331px;";
-		img.src="diagram/merge.png";
-		return false;
+			id="upper1";
+			var img = document.getElementById(id);
+			img.style="width:288px;height:331px;";
+			img.src="diagram/merge.png";
+			return false;
 		}
 		function m1()
 		{
-		id="upper1";
-		var img = document.getElementById(id);
-		img.style="width:123px;height:331px";
-		img.src="diagram/split.png";
-		return false;
+			id="upper1";
+			var img = document.getElementById(id);
+			img.style="width:123px;height:331px";
+			img.src="diagram/split.png";
+			return false;
 		}
 		function s2()
 		{
-		id="lower1";
-		var img = document.getElementById(id);
-		img.style="width:283px;height:303px;";
-		img.src="diagram/merge_lower.png";
-		return false;
+			id="lower1";
+			var img = document.getElementById(id);
+			img.style="width:283px;height:303px;";
+			img.src="diagram/merge_lower.png";
+			return false;
 		}
 		function m2()
 		{
-		id="lower1";
-		var img = document.getElementById(id);
-		img.style="width:223px;height:303px;";
-		img.src="diagram/split_lower.png";
-		return false;
+			id="lower1";
+			var img = document.getElementById(id);
+			img.style="width:223px;height:303px;";
+			img.src="diagram/split_lower.png";
+			return false;
 		}
 		function s3()
 		{
-		id="upper2";
-		var img = document.getElementById(id);
-		img.style="width:233px;height:273px;";
-		img.src="diagram/merge2.png";
-		return false;
+			id="upper2";
+			var img = document.getElementById(id);
+			img.style="width:233px;height:273px;";
+			img.src="diagram/merge2.png";
+			return false;
 		}
 		function m3()
 		{
-		id="upper2";
-		var img = document.getElementById(id);
-		img.style="width:123px;height:273px;";
-		img.src="diagram/split2.png";
-		return false;
+			id="upper2";
+			var img = document.getElementById(id);
+			img.style="width:123px;height:273px;";
+			img.src="diagram/split2.png";
+			return false;
 		}
 		function s4()
 		{
-		id="lower2";
-		var img = document.getElementById(id);
-		img.style="width:342px;height:303px;";
-		img.src="diagram/merge_lower2.png";
-		return false;
+			id="lower2";
+			var img = document.getElementById(id);
+			img.style="width:342px;height:303px;";
+			img.src="diagram/merge_lower2.png";
+			return false;
 		}
 		function m4()
 		{
-		id="lower2";
-		var img = document.getElementById(id);
-		img.style="width:223px;height:313px;";
-		img.src="diagram/split_lower2.png";
-		return false;
+			id="lower2";
+			var img = document.getElementById(id);
+			img.style="width:223px;height:303px;";
+			img.src="diagram/split_lower2.png";
+			return false;
 		}
+		
+		function a1()
+		{
+			id="upper3";
+			var img = document.getElementById(id);
+			img.style="width:438px;height:278px;";
+			img.src="diagram/Delete_upper.png";
+			return false;
+		}
+		function d1()
+		{
+			id="upper3";
+			var img = document.getElementById(id);
+			img.style="width:123px;height:273px;";
+			img.src="diagram/Add_upper.png";
+			return false;
+		}
+		
+		function a2()
+		{
+			id="lower3";
+			var img = document.getElementById(id);
+			img.style="width:488px;height:293px;";
+			img.src="diagram/Delete_lower.png";
+			return false;
+		}
+		
+		function d2()
+		{
+			id="lower3";
+			var img = document.getElementById(id);
+			img.style="width:223px;height:303px;";
+			img.src="diagram/Add_lower.png";
+			return false;
+		}
+		
+		function a3()
+		{
+			id="upper4";
+			var img = document.getElementById(id);
+			img.style="width:438px;height:278px;";
+			img.src="diagram/Delete_upper2.png";
+			return false;
+		}
+		
+		function d3()
+		{
+			id="upper4";
+			var img = document.getElementById(id);
+			img.style="width:438px;height:278px;";
+			img.src="diagram/Delete_upper.png";
+			return false;
+		}
+		
+		function a4()
+		{
+			id="lower4";
+			var img = document.getElementById(id);
+			img.style="width:488px;height:293px;";
+			img.src="diagram/Delete_lower2.png";
+			return false;
+		}
+		
+		function d4()
+		{
+			id="lower4";
+			var img = document.getElementById(id);
+			img.style="width:488px;height:293px;";
+			img.src="diagram/Delete_lower.png";
+			return false;
+		}
+		
 	</script>
     <!-- Add your page here -->
 </body>

@@ -6,3 +6,31 @@ button {
 text {
     font: 12px sans-serif;
 }
+table, th, td {
+	 padding: 30px;
+}
+th{
+text-align:center;
+font-size: 28px;
+}
+td{
+text-align:left;
+font-size: 14px;
+color:#666666;
+}
+.mid{
+text-align:center;
+font-size: 16px;
+}
+.entext{
+	font-size: 18px;
+}
+.enterprise{
+	padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+input{
+	font-size: 15px;
+}

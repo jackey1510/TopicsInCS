@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/others.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/w3data.js"></script> -->
+</head>
+<body>
+    <!-- <div w3-include-html="nav.html"></div>  -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Topics in Computer Science</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="syntax.html"><i class="fa fa-envelope-o"></i> Instructions</a></li>
+                    <li><a href="operations.html"><i class="fa fa-envelope-o"></i> Operations(1)</a></li>
+                    <li><a href="shift.html"><i class="fa fa-envelope-o"></i> Operation(2)</a></li>
+                    <li><a href="analysis.html"><i class="fa fa-envelope-o"></i> Analysis</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Add your page here -->
+	<br>
+	
+	<div class="enterprise">
+		<h1>Enterprise Schema</h1>
+		<h2>Problems of User Schema</h2>
+		<!-- <div> -->
+			<img id = "convention" src="diagram/convention.png" style="width:30%;height:30%;">
+			<p class="entext">At 1970s, the database design process was focusing on the user view of the data. However, the user schema is not a 'pure' representation of the world.<br> 
+			There are a few reasons:</p>
+			<ul style="font-size: 18px;">
+				<li>The database designer is restricted by the limited capabilities of the database management system.</li>
+				<li>User schema might contain some features related to data storage representation</li>
+				<li>User schema is usually designed to be efficient for a certain type of data processing operations.</li>
+			</ul>
+			<p class="entext">This makes the user schema diffcult to understand and change. Therefore, an enterprise schema was introduced as the intermediate stage of the design process.</p>
+		
+		<!-- </div> -->
+		<h2>Advantage of Using Enterprise Prise Schema</h2>
+		<!-- <div style="width:80%"> -->
+			<p class="entext">The enterprise schema will be translated into different schemata for different database management systems.  It can also be translated into several schemata for the same databasemanagement system to optimize different types of dataprocessing operations.<br>
+			There are several advantages of this approach:</p>
+			<ul style="font-size: 18px;">
+				<li>Easier to understand: The enterprise schema does not have the restrictions of the underlying database management/system;</li>
+				<li>More stable than the user schema: since some types of changes in the user schema may not require any change in the enterprise schema. If the enterprise schema needs to be changed to reflect the changes in the enterprise environment, the changes can be performed easily since efficiency and storage issues are not considered.</li>
+			</ul>
+			<img src="diagram/enterprise_schema.png" style="width:50%;height:50%;">
+		<!-- </div> -->
+		<div>
+		<h2>Mental Framework</h2>
+		<p class="entext">Since the Entity-Relationship (E-R) model have been found useful in modeling the real world. Entity-Relationship(E-R) Model will be used as the metal framewokr and E-R  diagram will be used to represent the enterprise view of data.</p>
+		<p>Reference: The Entity-Relationship Model: a basis for the enterprise view of data, PPS Chen AFIPS Proceedings 1977</p>
+		</div>
+	</div>
+    <!-- Add your page here -->
+</body>
+</html>
